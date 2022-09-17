@@ -22,7 +22,6 @@ window.addEventListener('resize', ()=>{
 
 
 
-
 // const geometry = new THREE.SphereGeometry( 15, 32, 16 );
 // const material = new THREE.MeshBasicMaterial( { color: 0xffff00 } );
 
@@ -35,8 +34,10 @@ var mesh =  new THREE.Mesh(geometry, material);
 mesh.position.x = 0;  // 0 = center
 mesh.position.y = 0;
 mesh.position.z = 0;
+
 //mesh.rotation.set(x,y,z);
-mesh.rotation.set(7,2,0);
+//mesh.rotation.set(7,2,0);
+
 mesh.scale.set(1,1,1);
 scene.add(mesh);
 
@@ -60,17 +61,17 @@ scene.add(light);
 renderer.render(scene, camera);
 
 
-
+/*
 
 //for complex animation we can use Gsap, green sock animation, time line plugin
 //this.tl = new TimeLineMax().delay(1 sec = 1000msec ,300 millisecond = .3 sec);
-
-/*
+this.tl = new TimelineMax();
 this.tl = new TimelineMax().repeat(4).delay(.3)
 this.tl = new TimelineMax().delay(.3)
  this.tl = new TimelineMax({paused: true});
 
 //this.tl.to(this.mesh.scale, duration=1, obj= {x:2, ease: Expo.easeOut})
+
    this.tl.to(this.mesh.scale, 1, {x:2, y:2, z:2, ease: Expo.easeOut});
    this.tl.to(this.mesh.scale, 1, {x: 1, y: 1, z: 1, ease: Expo.easeOut}); 
 
@@ -87,9 +88,20 @@ this.tl = new TimelineMax().delay(.3)
 document.body.addEventListener('click', ()=>{
     this.tl.play();
 })
+
+var onClick;
+renderer.render( scene, camera );
 render();
- window.addEventListener('mousemove', onMouseMove);
-*/
+ window.addEventListener('click', onClick);
+
+ */
+
+
+
+
+
+
+
 
 
 // var raycaster = new THREE.Raycaster();    //hover, mouse over, pointer over
@@ -107,6 +119,7 @@ render();
 
 // 		intersects[ i ].object.material.color.set( 0xff0000 );
 //     //    intersects[ i ].object.rotation.set(2,3,2);
+
 //         this.tl = new TimelineMax();
 //    this.tl.to(intersects[i].object.scale, 1, {x:2, y:2, z:2, ease: Expo.easeOut});
 //    this.tl.to(intersects[i].object.scale, 1, {x: 1, y: 1, z: 1, ease: Expo.easeOut});

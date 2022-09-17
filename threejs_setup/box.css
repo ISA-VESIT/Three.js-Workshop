@@ -1,21 +1,21 @@
 
 
 body {
-    /* background-color: rgb(62, 147, 221); */
+   
     margin: 0;
     height: 100vh;
 }
 
+
 /* remove scrollbar */
-   /* canvas {
+   canvas {
     display: block;
-}   */
+}  
 
 
 
 h1 {
     position: absolute;
-    
     top: 5em ;
     left: 4em;
     text-align: center;
